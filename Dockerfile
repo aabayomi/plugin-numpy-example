@@ -5,13 +5,14 @@
 # https://github.com/waggle-sensor/plugin-base-images
 FROM waggle/plugin-base:1.1.0-ml-cuda11.0-amd64
 
-# Now we include the Python requirements.txt file and install any missing dependencies.
-COPY requirements.txt .
-RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Finally, we include our code and specify what command should be run to execute it.
 COPY .  /app/
 
 WORKDIR /app
+
+# Now we include the Python requirements.txt file and install any missing dependencies.
+COPY requirements.txt .
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 # ENTRYPOINT ["python3" , "main.py"]

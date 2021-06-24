@@ -14,4 +14,4 @@ COPY .  /app/
 
 WORKDIR /app
 
-ENTRYPOINT ["python3" , "main.py"]
+# ENTRYPOINT ["python3" , "main.py"]

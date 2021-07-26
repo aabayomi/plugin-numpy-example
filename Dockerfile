@@ -16,4 +16,4 @@ COPY test.py .
 COPY test.jpg .
 COPY profile.py .
 
-CMD [ "python3","profile.py" ]
+#CMD [ "python3","profile.py" ]
